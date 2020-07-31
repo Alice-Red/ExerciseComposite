@@ -7,6 +7,9 @@ namespace ExerciseComposite
     public interface IEntity
     {
         public string Name { get; }
+        public string Id { get; }
+
+        public IEntity[] GetChildren();
 
     }
 }

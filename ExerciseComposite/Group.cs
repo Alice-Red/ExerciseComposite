@@ -5,26 +5,18 @@ using System.Text;
 
 namespace ExerciseComposite
 {
-    public class Group : IEnumerable<IEntity>, IEntity
-    {
+    public class Group :　Many, IEntity {
         public string Name { get; private set; }
 
-        private List<User> users = new List<User>();
+        public string Id { get; private set; }
+
 
         public Group(string name) {
             Name = name;
         }
 
-        public void Add(User user) {
-            users.Add(user);
-        }
-
-        public IEnumerator<IEntity> GetEnumerator() {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator() {
-            throw new NotImplementedException();
+        public IEntity[] GetChildren() {
+            return entities.ToArray();
         }
     }
 }

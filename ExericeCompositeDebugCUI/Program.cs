@@ -15,6 +15,7 @@ namespace ExericeCompositeDebugCUI
             User Asan = new User("Aさん");
 
             role.SetMember(gp1);
+            role.SetMember(Asan);
             
         }
     }
