@@ -5,9 +5,9 @@ using System.Text;
 
 namespace ExerciseComposite
 {
-    public class Role : Many
+    public class Role : Many, IHaveName
     {
-        public string Name { get; private set; }
+        public string Name { get; }
 
         public Role(string name) {
             Name = name;

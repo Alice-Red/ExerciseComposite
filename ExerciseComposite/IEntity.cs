@@ -11,5 +11,7 @@ namespace ExerciseComposite
 
         public IEntity[] GetChildren();
 
+        public void ViewInConsole(int level);
+
     }
 }

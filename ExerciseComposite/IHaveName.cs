@@ -4,8 +4,8 @@ using System.Text;
 
 namespace ExerciseComposite
 {
-    public class Organization
+    public interface IHaveName
     {
-
+        public string Name { get; }
     }
 }

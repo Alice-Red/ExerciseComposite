@@ -9,7 +9,7 @@ namespace ExerciseComposite
 {
     public abstract class Many : IEnumerable<IEntity>
     {
-        internal List<IEntity> entities = new List<IEntity>();
+        protected List<IEntity> entities = new List<IEntity>();
 
         public IEntity this[string name] {
             get {
@@ -26,7 +26,7 @@ namespace ExerciseComposite
         }
 
         public void SetMember(IEntity entity) {
-            entities.Add(entity);
+            Add(entity);
         }
 
         public IEnumerator<IEntity> GetEnumerator() {
@@ -40,5 +40,6 @@ namespace ExerciseComposite
                 yield return item;
             }
         }
+
     }
 }

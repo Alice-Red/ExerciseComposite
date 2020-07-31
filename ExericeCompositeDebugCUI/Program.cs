@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using ExerciseComposite;
 
 namespace ExericeCompositeDebugCUI
@@ -6,17 +7,69 @@ namespace ExericeCompositeDebugCUI
     class Program
     {
         static void Main(string[] args) {
+
+            UserFactory.Instance.Get("Butter");
+
             Role role = new Role("情報システム部");
-            Group gp1 = new Group("") {
-                new User("Butter"),
-                new User("Cherry"),
-                new User("Duff"),
+            Group gp1 = new Group("group1") {
+                UserFactory.Instance.Get("Apple"),
+                UserFactory.Instance.Get("Butter"),
+                UserFactory.Instance.Get("Cherry"),
+                UserFactory.Instance.Get("Duff"),
             };
-            User Asan = new User("Aさん");
+
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
+            Task.Factory.StartNew(() => {
+                User Asan = UserFactory.Instance.Get("Apple");
+                role.SetMember(Asan);
+            });
 
             role.SetMember(gp1);
-            role.SetMember(Asan);
-            
+
+
+            //Console.WriteLine(UserFactory.Instance.);
+            System.Threading.Thread.Sleep(1000);
+
+            Console.ReadLine();
         }
     }
 }
