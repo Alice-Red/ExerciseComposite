@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExerciseComposite
 {
-    public class Role : Many, IHaveName
+    public class Role : IHaveName
     {
         public string Name { get; }
 

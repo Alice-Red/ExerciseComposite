@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ExerciseComposite
 {
-    public class User : IEntity, IHaveName
+    public class User : IEntity
     {
         public string Name { get; private set; }
 
@@ -18,8 +18,8 @@ namespace ExerciseComposite
             return null;
         }
 
-        public void ViewInConsole(int level) {
+        //public void ViewInConsole(int level) {
 
-        }
+        //}
     }
 }

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ExerciseComposite
 {
+    [Obsolete]
     public class Organization
     {
 

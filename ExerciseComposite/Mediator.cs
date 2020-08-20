@@ -7,5 +7,6 @@ namespace ExerciseComposite
     public class Mediator
     {
 
+
     }
 }

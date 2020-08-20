@@ -4,14 +4,12 @@ using System.Text;
 
 namespace ExerciseComposite
 {
-    public interface IEntity
+    public interface IEntity : IHaveName
     {
-        public string Name { get; }
         public string Id { get; }
 
-        public IEntity[] GetChildren();
+        //public IEntity[] GetChildren();
 
-        public void ViewInConsole(int level);
 
     }
 }
